@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="300">
-    <title>Dashboard</title>
+    <title>Monitor Financeiro</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
             background-color: black;
             overflow: hidden;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
         }
 
@@ -26,7 +27,16 @@
 </head>
 
 <body>
-    <img src="grafico.jpg" id="dash">
+    <img id="dashboard" src="grafico.jpg" alt="Gráfico Financeiro">
+
+    <script>
+        // Esse script adiciona um número único após o nome da imagem
+        // Exemplo: grafico.jpg?v=123456789
+        // Isso obriga a TV a baixar a versão mais recente do GitHub
+        var imagem = document.getElementById('dashboard');
+        var timestamp = faturar = new Date().getTime();
+        imagem.src = "grafico.jpg?t=" + timestamp;
+    </script>
 </body>
 
 </html>
